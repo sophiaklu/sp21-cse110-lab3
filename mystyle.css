@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "myFont";
+  src: url(PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: "myFont";
+}
+
+header {
+  color: white;
+}
+
+div {
+  position: relative;
+}
+
+img {
+  /* element selector */
+  border-radius: 8px; /* border radius */
+  border-width: 3pt;
+  border-style: solid;
+  border-color: black;
+  display: block;
+  margin-left: auto;
+  margin: auto;
+}
+
+img:hover {
+  /* pseudo class - exists when hovering over image */
+  box-shadow: 0 0 2mm 1px rgba(0, 140, 186, 0.5);
+}
+
+.parent {
+  display: flex;
+  justify-content: center; /* makes centered */
+
+  /*flex-basis: content;
+  /*flex-direction: row | row-reverse | column | column-reverse;*/
+}
+
+.child1 {
+  flex-grow: 1;
+}
+.child2 {
+  flex-grow: 1;
+}
+.child3 {
+  flex-shrink: 1;
+}
+
+ul > li {
+  display: flex;
+}

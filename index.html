@@ -5,23 +5,29 @@
         <meta name="author" content="Sophia Klueter">
         <title>Hogwarts Journal Entries</title>
         <link rel="shortcut icon" type="image/png" href="/media/journal.png"/>
+        <link rel="stylesheet" href="mystyle.css">
+        <style>
+            body {
+                background-color: #580218;
+            }
+        </style>
     </head>
     <body>
         <header>
             <div>Hogwarts Entries</div>
             <nav>
-                <ol>
-                    <li><a href="#day1">Day1:9/14/21</a></li>
-                    <li><a href="#day2">Day2:9/15/21</a></li>
-                    <li><a href="#day3">Day3:9/16/21</a></li>
+                <ol class="parent">
+                    <li class="child1"><a href="#day1">Day1:9/14/21</a></li>
+                    <li class="child2"><a href="#day2">Day2:9/15/21</a></li>
+                    <li class="child3"> <a href="#day3">Day3:9/16/21</a></li>
                 </ol>
             </nav>
         </header>
         <main>
-            <h1>My Days at Hogwarts</h1>
+            <h1 style="color:rgb(144, 144, 194);text-align:center;">My Days at Hogwarts</h1>
             <img
             src="media/hogwarts.jpeg"
-            width="250"
+            width="500"
             alt="hogwarts"
             />
             <hr>
@@ -76,55 +82,55 @@
                     levitation charm
                 </details>
             </section>
-            <hr>
-            <footer>
-                <h3>Create New Journal Entry:</h3>
-                <form onsubmit="alert('Entered')">
-                    <input type="text" placeholder="Entry Name" />
-
-                    <label for="start">Date:</label>
-
-                    <input type="date" id="start" name="date-entry"
-                        value="2021-09-17"
-                        min="2021-01-01" max="2022-12-31">
-                    <fieldset>
-                        <legend>Choose your mood for today</legend>
-                        <input type="radio" id="good" name="mood">
-                        <label for="good">Good</label><br/>
-                        <input type="radio" id="bad" name="mood">
-                        <label for="bad">Bad</label><br/>
-                    </fieldset>
-
-                    <label for="journal">Enter your journal entry here:</label><br>
-                    <textarea id="journal" name="story"
-                        rows="5" cols="33">It was a dark and stormy night...
-                    </textarea><br>
-
-                    <label for="winner">Which house is in the lead for points:</label>
-                    <input list="houses" id="winner" name="winner" />
-
-                    <datalist id="houses">
-                        <option value="Gryffindor">
-                        <option value="Hufflepuff">
-                        <option value="Slytherin">
-                        <option value="Ravenclaw">
-                    </datalist><br>
-
-                    <label for="class-select">Favorite class so far:</label>
-
-                    <select name="class" id="class-select">
-                        <option value="">--Please choose an option--</option>
-                        <option value="astronomy">astronomy</option>
-                        <option value="charms">charms</option>
-                        <option value="defense against the dark arts">defense against the dark arts</option>
-                        <option value="alchemy">alchemy</option>
-                        <option value="potions">potions</option>
-                        <option value="transfigurations">transfigurations</option>
-                    </select><br>
-                    <p><input type="checkbox" />click here to get notified to do daily entries</p>
-                    <button>Enter Entry</button>
-                  </form>
-            </footer>
         </main>
+        <hr>
+        <footer>
+            <h3>Create New Journal Entry:</h3>
+            <form onsubmit="alert('Entered')">
+                <input type="text" placeholder="Entry Name" />
+
+                <label for="start">Date:</label>
+
+                <input type="date" id="start" name="date-entry"
+                    value="2021-09-17"
+                    min="2021-01-01" max="2022-12-31">
+                <fieldset>
+                    <legend>Choose your mood for today</legend>
+                    <input type="radio" id="good" name="mood">
+                    <label for="good">Good</label><br/>
+                    <input type="radio" id="bad" name="mood">
+                    <label for="bad">Bad</label><br/>
+                </fieldset>
+
+                <label for="journal">Enter your journal entry here:</label><br>
+                <textarea id="journal" name="story"
+                    rows="5" cols="33">It was a dark and stormy night...
+                </textarea><br>
+
+                <label for="winner">Which house is in the lead for points:</label>
+                <input list="houses" id="winner" name="winner" />
+
+                <datalist id="houses">
+                    <option value="Gryffindor">
+                    <option value="Hufflepuff">
+                    <option value="Slytherin">
+                    <option value="Ravenclaw">
+                </datalist><br>
+
+                <label for="class-select">Favorite class so far:</label>
+
+                <select name="class" id="class-select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="astronomy">astronomy</option>
+                    <option value="charms">charms</option>
+                    <option value="defense against the dark arts">defense against the dark arts</option>
+                    <option value="alchemy">alchemy</option>
+                    <option value="potions">potions</option>
+                    <option value="transfigurations">transfigurations</option>
+                </select><br>
+                <p><input type="checkbox" />click here to get notified to do daily entries</p>
+                <button>Enter Entry</button>
+            </form>
+        </footer>
     </body>
 </html>
