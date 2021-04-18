@@ -5,14 +5,29 @@
 
 body {
   font-family: "myFont";
+  color: white;
 }
 
 header {
-  color: white;
+  color: hsl(0, 100, 100);
+  position: static;
 }
 
 div {
   position: relative;
+  font-size: 2em;
+  margin: 30px 40vw 10px;
+}
+
+main {
+  padding-top: 80px;
+  padding-right: 80px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+footer {
+  padding: 25px;
 }
 
 img {
@@ -22,7 +37,6 @@ img {
   border-style: solid;
   border-color: black;
   display: block;
-  margin-left: auto;
   margin: auto;
 }
 
@@ -34,9 +48,6 @@ img:hover {
 .parent {
   display: flex;
   justify-content: center; /* makes centered */
-
-  /*flex-basis: content;
-  /*flex-direction: row | row-reverse | column | column-reverse;*/
 }
 
 .child1 {
@@ -51,4 +62,47 @@ img:hover {
 
 ul > li {
   display: flex;
+  color: teal;
+}
+
+#day1,
+#day2,
+#day3 {
+  text-decoration: violet wavy underline;
+  margin-top: 30px;
+}
+
+a [href="#day1"] {
+  font-size: large;
+}
+
+*.spell {
+  color: thistle;
+}
+
+video {
+  height: 50vh;
+  width: 50vw;
+  max-height: 300px;
+}
+
+audio {
+  max-width: 300px;
+}
+
+button:active {
+  color: thistle;
+}
+
+li:first-of-type + li {
+  color: thistle;
+}
+
+h3 ~ p {
+  font-size: large;
+}
+
+/* selects the first letter of a <p> */
+p::first-letter {
+  font-size: 140%;
 }
