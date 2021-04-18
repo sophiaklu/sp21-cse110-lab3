@@ -1,24 +1,29 @@
+/* import font */
 @font-face {
   font-family: "myFont";
   src: url(PlayfairDisplay-VariableFont_wght.ttf);
 }
 
 body {
-  font-family: "myFont";
-  color: white;
+  font-family: "myFont"; /* set body's font*/
+  color: white; /* set body's color*/
 }
 
 header {
-  color: hsl(0, 100, 100);
-  position: static;
+  color: hsl(0, 100, 100); /* set header's color*/
+  position: static; /* set header's postion to be unmoving*/
 }
 
-div {
-  position: relative;
-  font-size: 2em;
-  margin: 30px 40vw 10px;
+@media (max-width: 50rem) {
+  /* set max width of this text for screen*/
+  div {
+    position: relative;
+    font-size: 2em;
+    margin: 30px 40vw 10px;
+  }
 }
 
+/*make padding around all main chunk on all sides*/
 main {
   padding-top: 80px;
   padding-right: 80px;
@@ -26,6 +31,7 @@ main {
   padding-left: 80px;
 }
 
+/*make padding for footer*/
 footer {
   padding: 25px;
 }
@@ -33,10 +39,10 @@ footer {
 img {
   /* element selector */
   border-radius: 8px; /* border radius */
-  border-width: 3pt;
-  border-style: solid;
-  border-color: black;
-  display: block;
+  border-width: 3pt; /* border width */
+  border-style: solid; /* border style */
+  border-color: black; /* set border's color*/
+  display: block; /* center image */
   margin: auto;
 }
 
@@ -45,6 +51,7 @@ img:hover {
   box-shadow: 0 0 2mm 1px rgba(0, 140, 186, 0.5);
 }
 
+/*center the navagation bar*/
 .parent {
   display: flex;
   justify-content: center; /* makes centered */
@@ -65,6 +72,7 @@ ul > li {
   color: teal;
 }
 
+/* make underline on headings*/
 #day1,
 #day2,
 #day3 {
@@ -72,32 +80,41 @@ ul > li {
   margin-top: 30px;
 }
 
-a [href="#day1"] {
+/* set link color*/
+a[href="#day1"],
+a[href="#day2"],
+a[href="#day3"] {
   font-size: large;
+  color: sandybrown;
 }
 
 *.spell {
-  color: thistle;
+  color: thistle; /*set spells colors */
 }
 
+/*set height and width of the video*/
 video {
   height: 50vh;
   width: 50vw;
   max-height: 300px;
 }
 
+/*set max width of the audio*/
 audio {
   max-width: 300px;
 }
 
+/*when button is pushed it will turn this color*/
 button:active {
   color: thistle;
 }
 
+/*second list item will be this color*/
 li:first-of-type + li {
   color: thistle;
 }
 
+/* p after h3 headers will have a large font size*/
 h3 ~ p {
   font-size: large;
 }
@@ -105,4 +122,27 @@ h3 ~ p {
 /* selects the first letter of a <p> */
 p::first-letter {
   font-size: 140%;
+}
+
+/*container/ parent for the grid of 2 rows and 2 cols*/
+.container {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 80px auto 80px;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+.item {
+  align-self: center; /*center each item*/
+}
+
+/*make list items after ol have a circle type*/
+ol li {
+  list-style-type: circle;
+}
+
+/*make only day2 heading be this color*/
+#day2.heading {
+  color: rgba(0, 140, 186, 0.5);
 }
